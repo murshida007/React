@@ -17,12 +17,17 @@ import Weatherapp from './Weatherapp';
 import Filmdata from './Filmdata';
 import Detail from './Detail';
 import Consume from './Context/Consume';
-import Theme_provider from './Context/Theme_provider';
+import Lan from './Language/Lan';
+import Lang_provider from './Language/Lang_provider';
+import Main from './rendaring/Main';
+import Notlogged from './rendaring/Notlogged';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Theme_provider>
+    <Lang_provider>
     <BrowserRouter>
     <Routes>
       <Route path='/demo' element={<Demo/>}></Route>
@@ -38,13 +43,16 @@ root.render(
       <Route path='/Film' element={<Filmdata/>}></Route>
       <Route path='/detail/:id' element={<Detail/>}></Route>
       <Route path='/consume' element={<Consume/>}></Route>
+      <Route path='/lan' element={<Lan/>}></Route>
+      <Route path='/nlog' element={<Notlogged/>}></Route>
+      <Route path='/con' element={<Main/>}></Route>
 
      
       
 
     
       </Routes></BrowserRouter>
-    </Theme_provider>
+    </Lang_provider>
   </React.StrictMode>
 );
 
